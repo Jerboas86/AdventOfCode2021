@@ -9,14 +9,11 @@ fn main() {
 
     while let Some(m) = iter.next() {
         let first: u32 = m.iter().sum();
-        match iter.peek() {
-            Some(after_m) => {
-                let second = after_m.iter().sum();
-                if first < second {
-                    inscreased += 1;
-                }
+        if let Some(after_m) = iter.peek() {
+            let second = after_m.iter().sum();
+            if first < second {
+                inscreased += 1;
             }
-            None => (),
         }
     }
 
