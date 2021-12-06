@@ -49,16 +49,10 @@ impl FromStr for Instructions {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 struct Position {
     x: i32,
     y: i32,
-}
-
-impl Default for Position {
-    fn default() -> Self {
-        Self { x: 0, y: 0 }
-    }
 }
 
 impl From<Instructions> for Position {
