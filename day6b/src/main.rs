@@ -36,12 +36,6 @@ fn parse_raw(raw: &str) -> EcoSystem {
     EcoSystem::new(adults)
 }
 
-#[derive(Debug, PartialEq, Clone)]
-enum Stage {
-    Young,
-    Adult,
-}
-
 #[derive(Debug, Clone)]
 struct FishesPop {
     pop: usize,
